@@ -1,5 +1,7 @@
 import { personalInfo } from "../data/portfolioData";
 
+import profileImg from "../assets/profile.jpg";
+
 // ===== Profile photo with cyber-themed frame =====
 function ProfilePhoto() {
   return (
@@ -34,7 +36,7 @@ function ProfilePhoto() {
 
       {/* Photo */}
       <img
-        src="/profile.jpg"
+        src={profileImg}
         alt="Panasa Sonu"
         style={{
           position: "relative",
