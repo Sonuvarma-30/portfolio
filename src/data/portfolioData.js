@@ -16,8 +16,8 @@ export const personalInfo = {
   // TODO: Replace with your actual LinkedIn profile URL
   linkedin: "https://linkedin.com/in/",  // e.g. https://linkedin.com/in/panasasonu
 
-  // TODO: Add your resume PDF file to public/ folder and update path
-  resumeUrl: "/resume.pdf",
+  // Resume — Google Drive public link (opens for viewing + download)
+  resumeUrl: "https://drive.google.com/uc?export=download&id=1HLf3e4kUgAER2GrmVVhpjs0cUN5L3LtQ",
 };
 
 export const aboutText = [
