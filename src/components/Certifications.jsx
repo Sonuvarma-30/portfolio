@@ -1,7 +1,7 @@
 import { certifications } from "../data/portfolioData";
 
 // ===== Single Certification Card =====
-function CertCard({ title, issuer, icon, category }) {
+function CertCard({ title, issuer, icon, category, link }) {
   return (
     <div
       className="card"
@@ -88,19 +88,57 @@ function CertCard({ title, issuer, icon, category }) {
       />
 
       {/* Verified label */}
-      <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
-        <span
-          style={{
-            width: "6px",
-            height: "6px",
-            borderRadius: "50%",
-            background: "var(--accent-green)",
-            boxShadow: "0 0 6px var(--accent-green)",
-          }}
-        />
-        <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontFamily: "Courier New, monospace" }}>
-          Certified
-        </span>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.5rem" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
+          <span
+            style={{
+              width: "6px",
+              height: "6px",
+              borderRadius: "50%",
+              background: "var(--accent-green)",
+              boxShadow: "0 0 6px var(--accent-green)",
+            }}
+          />
+          <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontFamily: "Courier New, monospace" }}>
+            Certified
+          </span>
+        </div>
+
+        {/* View Certificate button — only shown if link exists */}
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.3rem",
+              fontSize: "0.72rem",
+              color: "var(--accent-cyan)",
+              border: "1px solid rgba(0,212,255,0.25)",
+              borderRadius: "4px",
+              padding: "0.2rem 0.55rem",
+              fontFamily: "Courier New, monospace",
+              transition: "background 0.2s, border-color 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "rgba(0,212,255,0.08)";
+              e.currentTarget.style.borderColor = "rgba(0,212,255,0.5)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.borderColor = "rgba(0,212,255,0.25)";
+            }}
+          >
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+            View
+          </a>
+        )}
       </div>
     </div>
   );

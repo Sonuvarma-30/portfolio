@@ -189,6 +189,14 @@ export const certifications = [
     icon: "🤖",
     category: "Artificial Intelligence",
   },
+  {
+    id: 5,
+    title: "PwC Launchpad Program – Participation Certificate",
+    issuer: "PwC, India (CEDA)",
+    icon: "🏆",
+    category: "Professional Program",
+    link: "https://drive.google.com/file/d/17n9aP8FouDic6ZkkoNX00Dc-HXfzv3QD/view?usp=sharing",
+  },
 ];
 
 export const education = [
