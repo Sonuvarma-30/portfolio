@@ -17,7 +17,7 @@ export const personalInfo = {
   linkedin: "https://linkedin.com/in/",  // e.g. https://linkedin.com/in/panasasonu
 
   // Resume — opens in Google Drive in a new tab
-  resumeUrl: "https://drive.google.com/file/d/1HLf3e4kUgAER2GrmVVhpjs0cUN5L3LtQ/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1S8m9d2XWGJy9Swz9OpuQgCln8ntaIXfi/view?usp=sharing",
 };
 
 export const aboutText = [
